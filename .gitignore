@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+
+# Env files
+.env
+
+# Docker
+*.log
