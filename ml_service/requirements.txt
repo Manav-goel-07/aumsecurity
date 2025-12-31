@@ -1,0 +1,7 @@
+flask==2.3.3
+opencv-python==4.8.1.78
+numpy==1.24.4
+pillow==10.0.1
+requests==2.31.0
+onnxruntime==1.16.3
+insightface==0.7.3  # May need: pip install onnxruntime

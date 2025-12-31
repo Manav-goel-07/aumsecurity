@@ -1,0 +1,38 @@
+Step 1: Open the Project and Prepare Environment (One-Time or If Changes Made)
+Open File Explorer or VS Code to C:\Users\arun_\aumsecurity.
+Backend Setup (if not done before or after code changes):
+Navigate to backend/ in a terminal: cd C:\Users\arun_\aumsecurity\backend.
+Activate virtual environment (venv): venv\Scripts\activate.bat (prompt changes to (venv)).
+If venv missing: py -3.11 -m venv venv then activate.
+Install/update dependencies (only if you edited code or requirements.txt): pip install -r requirements.txt.
+Frontend Setup (if not done or after npm changes):
+Navigate to frontend/ in another terminal: cd C:\Users\arun_\aumsecurity\frontend.
+Install/update dependencies (only if needed): npm install.
+ML Service (Optional, if you created ml_service/):
+Navigate to ml_service/: cd C:\Users\arun_\aumsecurity\ml_service.
+Activate venv (create if needed: py -3.11 -m venv venv && venv\Scripts\activate.bat).
+Install: pip install -r requirements.txt.
+Run: python app.py (starts on port 5000).
+Step 2: Start the Servers (Every Time)
+Use three separate terminals (open new ones via "New Terminal" in VS Code or Win+R > cmd).
+
+Terminal 1: Start Backend (FastAPI):
+
+Navigate: cd C:\Users\arun_\aumsecurity\backend.
+Activate venv: venv\Scripts\activate.bat.
+Run server: uvicorn app.main:app --reload --host 0.0.0.0 --port 8000.
+Expected: "Uvicorn running on http://0.0.0.0:8000" and "Application startup complete."
+Test: Open browser to http://localhost:8000/ → Shows {"message": "AUMSecurity Backend Running!"}.
+Auto-reloads on code changes (dev mode).
+Terminal 2: Start Frontend (React/Vite):
+
+Navigate: cd C:\Users\arun_\aumsecurity\frontend.
+Run dev server: npm run dev.
+Expected: "VITE v5.x.x ready in xxx ms" and "Local: http://localhost:5173/".
+Auto-reloads on code changes.
+Test: Open http://localhost:5173 → Login page loads.
+Terminal 3: Start ML Service (Optional):
+
+If using real ML: Navigate to ml_service/, activate venv, run python app.py.
+Expected: "Running on http://127.0.0.1:5000".
+Backend mocks it by default—no need unless integrating

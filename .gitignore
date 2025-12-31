@@ -1,10 +1,28 @@
-# Dependencies
-node_modules/
-venv/
-__pycache__/
-
-# Env files
+# Environment variables and secrets
 .env
 
-# Docker
-*.log
+# Database (SQLite—don't commit data)
+*.db
+aumsecurity.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Uploads and temps (from API)
+uploads/
+temp/
+detections/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
